@@ -1,16 +1,62 @@
-# React + Vite
+# React Digital Clock
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple digital clock built with React. The application displays the current time in real time and includes a theme switcher along with a 12-hour/24-hour format toggle.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Real-time clock that updates every second
+- Light and dark theme
+- 12-hour and 24-hour time format
+- Responsive glassmorphism-inspired UI
+- Smooth toggle animations
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the repository:
+
+```bash
+git clone https://github.com/avi-v2/react-digital-clock.git
+```
+
+Go to the project directory:
+
+```bash
+cd react-digital-clock
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+├── App.jsx
+├── App.css
+└── main.jsx
+```
+
+## Future Improvements
+- Multiple timezone support
+- User-selectable accent colors
+- Alarm and stopwatch features
+
+## License
+
+This project is open for learning and personal use.
