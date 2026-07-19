@@ -52,6 +52,11 @@ src/
 └── main.jsx
 ```
 
+## Preview
+<img width="1919" height="869" alt="image" src="https://github.com/user-attachments/assets/09fbe0a6-e69f-4eb6-beb1-cfe0e4b55ce3" />
+<img width="1919" height="869" alt="image" src="https://github.com/user-attachments/assets/555189e4-9606-409a-a92a-f1342b717e2c" />
+
+
 ## Future Improvements
 - Multiple timezone support
 - User-selectable accent colors
