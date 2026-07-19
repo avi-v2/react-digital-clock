@@ -1,0 +1,46 @@
+.Toggle{
+    width: 3.6rem;
+    height: 1.6rem;
+    background-color: rgb(54, 52, 52);
+    display: inline-block;
+    border-radius: 15px;
+    position: absolute;
+    left : 20px;
+    top : 20px;
+    box-shadow: 0px 3px 67px rgba(133, 132, 132, 0.94);
+    overflow: hidden; 
+    
+}
+.light .Toggle{
+    background-color: #F6FAFF;
+    box-shadow: 0px 3px 30px rgb(0, 0, 0,0.6);
+    color: wheat;
+
+}
+input{
+    display: none;
+}
+.Toggle::after{
+    content: "12";
+    display: flex;
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    background-color: wheat;
+    height: 1.35rem;
+    width: 1.35rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content:center; 
+    font-size: small;
+    transition: all .4s ease;
+    font-weight: bold;
+}
+.Toggle.active::after{
+    
+    content: "24";
+    transform:translateX(2rem) rotate(360deg);
+}
+.light .Toggle::after{
+    background-color: #2563EB;
+}

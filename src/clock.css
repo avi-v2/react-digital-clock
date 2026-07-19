@@ -1,0 +1,136 @@
+
+
+.clockContainer{
+    display: flex;
+    width: 70vw;
+    align-items: center;
+    justify-content: center;
+    padding:10px 40px 10px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 8px 30px rgba(0,0,0,.4);
+    font-family:"Digital",monospace;
+    font-size: clamp(4rem, 7vw, 10rem);
+    color:#06ea7f;
+    letter-spacing:5px;
+    flex-direction: column;
+    text-shadow:0 0 20px #00ff88;
+    -webkit-box-reflect:
+        below 2px
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.1)
+        );
+        
+    }
+    .light .clockContainer{
+        background: rgba(255,255,255,0.65);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(37,99,235,.15);
+        color: #2563eb;
+        box-shadow: 0 8px 30px rgba(37,99,235,.15);
+        -webkit-box-reflect:
+            below 2px
+            linear-gradient(
+                transparent,
+                rgba(255, 225, 225, 0.2)
+            );
+    }
+.date{
+    font-size: clamp(2rem, 3vw, 4rem);
+    padding-top: 5px;
+    position:absolute;
+    right:50px;
+    bottom:40px;
+    font-size:1.8rem;
+    text-shadow:0 0 4px #00ff88;
+    
+}
+.light .date{
+    text-shadow:0 0 4px #00ff88;
+    color:#475569;
+
+}
+@font-face{
+    font-family:"Digital";
+    src:url("./assets/fonts/digital-7.ttf");
+}
+@keyframes pulseLight{
+
+    from{
+        text-shadow:
+            0 0 5px #2563eb,
+            0 0 15px #2563eb;
+    }
+
+    to{
+        text-shadow:
+            0 0 10px #2563eb,
+            0 0 30px #2563eb,
+            0 0 60px #2563eb;
+    }
+
+}
+@keyframes pulse{
+
+    from{
+        text-shadow:
+            0 0 5px #00ff88,
+            0 0 15px #00ff88;
+    }
+
+    to{
+        text-shadow:
+            0 0 10px #00ff88,
+            0 0 30px #00ff88,
+            0 0 60px #00ff88;
+    }
+
+}
+.clockContainer {
+    animation: pulse 1s infinite alternate;
+}
+.light .clockContainer {
+    animation: pulseLight 1s infinite alternate;
+}
+.themeButton{
+    background-color: #262626;
+    color: #06EA7F;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid #111;
+    border-radius: 20px;
+    position: fixed;
+    right : 20px;
+    top : 20px;
+    box-shadow: 0px 3px 67px rgba(133, 132, 132, 0.94);
+    overflow: hidden; 
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 0;
+}
+.light .themeButton{
+    background-color: #F6FAFF;
+    color: #2563eb;
+    border:1px solid #dbeafe;
+    box-shadow: 0px 3px 67px rgb(0, 0, 0,0.6);
+}
+.show{
+    transform :rotate(0deg) scale(1);
+    opacity: 1;    
+}
+.hide{
+    transform:rotate(180deg) scale(0);
+    opacity: 0;
+}
+.show,.hide{
+    position: absolute;
+    transition: all 0.4s ease;
+}
